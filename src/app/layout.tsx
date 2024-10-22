@@ -36,8 +36,10 @@ export default function RootLayout({
         <footer className="py-6 border-t bg-gray-950 text-foreground border-gray-800">
           <div className="container mx-auto px-4 text-center text-gray-300">
             <p>Spooky AI Hackathon.</p>
-            <div className="flex items-center justify-center gap-4">
+            <div className="text-center mb-4">
               <span>Hackathon patrocinada por</span>
+            </div>
+            <div className="flex items-center justify-center gap-4">
               <div className="flex items-center gap-2">
                 <Cloudinary width={36} height={36} />
                 <span className="font-bold">Cloudinary</span>
@@ -48,8 +50,6 @@ export default function RootLayout({
                 <span className="font-bold">Midudev</span>
               </div>
             </div>
-
-
             <p className="mt-2">¡Usa el poder de la IA para crear las imágenes más espeluznantes!</p>
           </div>
         </footer>
