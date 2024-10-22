@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent } from "@/components/ui/card"
 import { Ghost, Skull, Cloud, Candy, Wand2, PenTool, Sparkles } from 'lucide-react'
-import { CldUploadWidget } from 'next-cloudinary'
+import { CldUploadWidget, CloudinaryUploadWidgetResults } from 'next-cloudinary'
 import { CardsCarouselDemo } from './ui/cards-demo'
 import { useRouter } from 'next/navigation'
 import { IconPumpkinScary } from '@tabler/icons-react'
@@ -59,8 +59,11 @@ export function HalloweenImageEditor() {
               <div className="space-y-4">
                 <CldUploadWidget
                   uploadPreset="upload-unsigned-images"
-                  onSuccess={(result) => {
-                    setResource(result?.info?.public_id);
+                  onSuccess={(result: CloudinaryUploadWidgetResults) => {
+                    if (result.info && typeof result.info !== 'string' && result.info.public_id) {
+                      const publicId = result.info.public_id;
+                      setResource(publicId);
+                    }
                   }}
                   onQueuesEnd={(result, { widget }) => {
                     widget.close();

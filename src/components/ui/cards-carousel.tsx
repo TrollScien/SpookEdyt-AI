@@ -275,7 +275,7 @@ export const BlurImage = ({
   className,
   alt,
   ...rest
-}: unknown) => {
+}: any) => {
   const [isLoading, setLoading] = useState(true);
   return (
     <CldImage
