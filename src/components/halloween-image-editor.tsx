@@ -9,6 +9,7 @@ import { Ghost, Skull, Cloud, Candy, Wand2, PenTool, Sparkles } from 'lucide-rea
 import { CldUploadWidget } from 'next-cloudinary'
 import { CardsCarouselDemo } from './ui/cards-demo'
 import { useRouter } from 'next/navigation'
+import { IconPumpkinScary } from '@tabler/icons-react'
 export function HalloweenImageEditor() {
   const [prompt, setPrompt] = useState('')
   const [resource, setResource] = useState<string | undefined>(undefined);
@@ -40,7 +41,10 @@ export function HalloweenImageEditor() {
     <div className="min-h-screen bg-gray-950 text-gray-100">
       <header className="py-6 border-b border-gray-800">
         <div className="container mx-auto px-4">
-          <h1 className="text-3xl font-bold text-orange-400">Halloween AI Image Editor</h1>
+          <div className='flex gap-2'>
+            <h1 className="text-3xl font-bold text-orange-400">SpookEdyt AI </h1>
+            <span className='text-orange-400'><IconPumpkinScary size={38} /></span>
+          </div>
           <p className="mt-2 text-gray-300">Transforma tus imágenes con el poder de la IA y el espíritu de Halloween</p>
         </div>
       </header>
