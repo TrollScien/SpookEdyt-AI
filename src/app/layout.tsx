@@ -33,7 +33,7 @@ export default function RootLayout({
         {children}
         <footer className="py-6 border-t bg-gray-950 text-foreground border-gray-800">
           <div className="container mx-auto px-4 text-center text-gray-300">
-            <p>Spooky AI Hackathon.</p>
+            <p>Spooky AI Hackathon. Powered By Cloudinary X Midudev.</p>
             <p className="mt-2">¡Usa el poder de la IA para crear las imágenes más espeluznantes!</p>
           </div>
         </footer>
