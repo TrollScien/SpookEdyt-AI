@@ -138,6 +138,7 @@ export function ImageComparisonComponent() {
 
             <div className="flex justify-between mt-2 text-sm text-gray-400">
               <span>Original</span>
+              <span>Puede tardar de 1 a 2 minutos en generarse la nueva imagen. Por favor espere...</span>
               <span>Generada</span>
             </div>
           </CardContent>
