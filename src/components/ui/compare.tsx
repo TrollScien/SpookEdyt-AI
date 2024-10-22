@@ -154,26 +154,12 @@ export const Compare = ({
     },
     [handleMove, autoplay]
   );
-  useEffect(() => {
-    // const img = new Image();
-    // img.src = secondImage;
-    // img.onload = () => {
-    //   setIsLoading(false);
-    // };
-    // img.onerror = () => {
-    //   setIsLoading(true);
-    // };
-    console.log(secondImage)
-    console.log(isLoading)
-  }, [secondImage, isLoading, setIsLoading]);
-
 
   const handleImageLoad = () => {
     setIsLoading(false);
   };
 
   const handleImageError = () => {
-    console.log('hola')
     setIsLoading(true);
 
   }
