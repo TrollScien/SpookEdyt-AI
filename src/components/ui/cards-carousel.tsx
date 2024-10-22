@@ -26,6 +26,7 @@ type Card = {
   src: string;
   title: string;
   category: string;
+  urlOriginalImage: string;
 };
 
 export const CarouselContext = createContext<{
@@ -234,10 +235,10 @@ export const Card = ({
                 {card.title}
               </motion.p>
               <motion.div
-                layoutId={layout ? `urlImagenOriginal-${card.urlImagenOriginal}` : undefined}
+                layoutId={layout ? `urlOriginalImage-${card.urlOriginalImage}` : undefined}
                 className="text-xl md:text-2xl font-semibold dark:text-neutral-700 mt-4 text-orange-300"
               >
-                <LinkPreview url={card.urlImagenOriginal} className="font-bold text-orange-300">
+                <LinkPreview url={card.urlOriginalImage} className="font-bold text-orange-300">
                   Imagen Original
                 </LinkPreview>
               </motion.div>

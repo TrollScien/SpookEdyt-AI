@@ -22,35 +22,30 @@ const data = [
         category: "Reemplazo de objeto",
         title: "Cambio de suéter por disfraz de Halloween",
         src: "rb3ouj1psrnwkle806j9",
-        urlImagenOriginal: "https://res.cloudinary.com/dww0lexy3/image/upload/v1729567630/soq0otpxjcp78ivonbdp.avif",
-        urlImagenTransformada: "https://res.cloudinary.com/dww0lexy3/image/upload/v1729568080/rb3ouj1psrnwkle806j9.avif"
+        urlOriginalImage: "https://res.cloudinary.com/dww0lexy3/image/upload/v1729567630/soq0otpxjcp78ivonbdp.avif",
     },
     {
         category: "Reemplazo de persona",
         title: "Cambia a un esqueleto.",
         src: "aaualxblpcs1redbed3y",
-        urlImagenOriginal: "https://res.cloudinary.com/dww0lexy3/image/upload/v1729567630/soq0otpxjcp78ivonbdp.avif",
-        urlImagenTransformada: "https://res.cloudinary.com/dww0lexy3/image/upload/v1729570124/aaualxblpcs1redbed3y.avif"
+        urlOriginalImage: "https://res.cloudinary.com/dww0lexy3/image/upload/v1729567630/soq0otpxjcp78ivonbdp.avif",
     },
     {
         category: "Reemplazo de objeto",
         title: "Maquillaje de Halloween.",
         src: "ejttk1bfyhvgrhvderuv",
-        urlImagenOriginal: "https://res.cloudinary.com/dww0lexy3/image/upload/v1729565849/uioymqqx4x9pstybyxkw.webp",
-        urlImagenTransformada: "https://res.cloudinary.com/dww0lexy3/image/upload/v1729572297/ejttk1bfyhvgrhvderuv.avif"
+        urlOriginalImage: "https://res.cloudinary.com/dww0lexy3/image/upload/v1729565849/uioymqqx4x9pstybyxkw.webp",
     },
     {
         category: "Reemplazo de fondo",
         title: "Agrega temática de Halloween.",
         src: "wfqs3urzevh3fxthwvie",
-        urlImagenOriginal: "https://res.cloudinary.com/dww0lexy3/image/upload/v1729621391/isn0rsizmhzphaeerkxx.jpg",
-        urlImagenTransformada: "https://res.cloudinary.com/dww0lexy3/image/upload/v1729621398/wfqs3urzevh3fxthwvie.avif"
+        urlOriginalImage: "https://res.cloudinary.com/dww0lexy3/image/upload/v1729621391/isn0rsizmhzphaeerkxx.jpg",
     },
     {
         category: "Reemplazo de objeto",
         title: "Agrega máscara de Jason.",
         src: "p9x2ljttbtypt4cvhvgq",
-        urlImagenOriginal: "https://res.cloudinary.com/dww0lexy3/image/upload/v1729567630/soq0otpxjcp78ivonbdp.avif",
-        urlImagenTransformada: "https://res.cloudinary.com/dww0lexy3/image/upload/v1729572674/p9x2ljttbtypt4cvhvgq.avif"
+        urlOriginalImage: "https://res.cloudinary.com/dww0lexy3/image/upload/v1729567630/soq0otpxjcp78ivonbdp.avif",
     },
 ];
