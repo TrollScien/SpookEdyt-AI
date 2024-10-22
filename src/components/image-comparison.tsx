@@ -31,6 +31,7 @@ export function ImageComparisonComponent() {
 
   const publicId = searchParams.get('publicId');
   const suggestionText = searchParams.get('suggestionText');
+  const replaceOption = searchParams.get('replaceOption');
 
   const urlImageOriginal = getCldImageUrl({
     src: publicId || '',
@@ -38,15 +39,32 @@ export function ImageComparisonComponent() {
     width: '800px',
     crop: 'fill'
   })
+
   const urlImageConverted = useMemo(() => {
-    return getCldImageUrl({
-      src: publicId || '',
-      height: '600px',
-      width: '800px',
-      crop: 'fill',
-      replaceBackground: suggestionText || ''
-    });
-  }, [publicId, suggestionText]);
+
+    if (replaceOption === 'object') {
+      const objectToReplace = searchParams.get('objectToReplace') || '';
+      const replacementObject = searchParams.get('replacementObject') || '';
+      return getCldImageUrl({
+        src: publicId || '',
+        height: '600px',
+        width: '800px',
+        crop: 'fill',
+        replace: [objectToReplace, replacementObject]
+      });
+    } else {
+      return getCldImageUrl({
+        src: publicId || '',
+        height: '600px',
+        width: '800px',
+        crop: 'fill',
+        replaceBackground: suggestionText || ''
+      });
+
+    }
+
+  }, [publicId, suggestionText, replaceOption, searchParams]);
+
 
   useEffect(() => {
     const loadingMessages = [
@@ -85,9 +103,11 @@ export function ImageComparisonComponent() {
     a.download = `image.${selectedFormat}`;
     a.click()
   }
-  if (typeof publicId !== 'string' || typeof suggestionText !== 'string') {
-    return <div>Error: Los parámetros no son válidos</div>;
-  }
+  // if (!publicId || typeof publicId !== 'string' || !suggestionText || typeof suggestionText !== 'string' || !replaceOption || typeof replaceOption !== 'string' || !searchParams) {
+  //   return <div>Error: Los parámetros no son válidos</div>;
+  // }
+
+
   return (
     <div className="min-h-screen bg-gray-950 text-gray-100">
       <header className="py-6 border-b border-gray-800">
@@ -112,8 +132,8 @@ export function ImageComparisonComponent() {
                     secondImage={generatedImage}
                     isLoading={isLoading}
                     setIsLoading={setIsLoading}
-                    firstImageClassName="object-cover object-left-top"
-                    secondImageClassname="object-cover object-left-top"
+                    firstImageClassName=""
+                    secondImageClassname=""
                     slideMode='drag'
                   />
                 </>
