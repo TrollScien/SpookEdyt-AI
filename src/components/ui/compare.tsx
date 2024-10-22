@@ -40,6 +40,7 @@ export const Compare = ({
 
   const sliderRef = useRef<HTMLDivElement>(null);
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isMouseOver, setIsMouseOver] = useState(false);
 
   const autoplayRef = useRef<NodeJS.Timeout | null>(null);
@@ -90,6 +91,7 @@ export const Compare = ({
   }
 
   const handleStart = useCallback(
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     (clientX: number) => {
       if (slideMode === "drag") {
         setIsDragging(true);
@@ -237,7 +239,7 @@ export const Compare = ({
               <CldImage
                 alt="first image"
                 fill
-                sizes="100vw"
+                sizes="50vw"
                 src={firstImage}
                 className={cn(
                   "absolute inset-0  z-20 rounded-2xl flex-shrink-0 w-full h-full select-none",
@@ -256,7 +258,7 @@ export const Compare = ({
             className={`absolute top-0 left-0 z-[19] rounded-2xl w-full h-full select-none ${secondImageClassname}`}
             alt="second image"
             fill
-            sizes="100vw"
+            sizes="50vw"
             src={secondImage}
             onLoad={() => {
               handleImageLoad()
