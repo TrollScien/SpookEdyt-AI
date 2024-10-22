@@ -47,7 +47,6 @@ export function ImageComparisonComponent() {
       replaceBackground: suggestionText || ''
     });
   }, [publicId, suggestionText]);
-  console.log(urlImageConverted)
 
   useEffect(() => {
     const loadingMessages = [
@@ -115,6 +114,7 @@ export function ImageComparisonComponent() {
                     setIsLoading={setIsLoading}
                     firstImageClassName="object-cover object-left-top"
                     secondImageClassname="object-cover object-left-top"
+                    slideMode='drag'
                   />
                 </>
               )}
@@ -125,8 +125,9 @@ export function ImageComparisonComponent() {
                     alt="Imagen original"
                     fill
                     placeholder='empty'
+                    priority
                     className="rounded-lg"
-                    sizes="100vw"
+                    sizes="50vw"
                   />
                   <div className="absolute inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75 rounded-lg">
                     <p className="text-center loading text-gray-400 animate-pulse">{loadingMessage.message}</p> <span className='text-gray-400'>{loadingMessage.icon}</span>
