@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Creepster } from 'next/font/google';
+import Cloudinary from "@/components/icons/cloudinary-logo";
+import Midudev from "@/components/icons/midu-logo";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -33,7 +35,21 @@ export default function RootLayout({
         {children}
         <footer className="py-6 border-t bg-gray-950 text-foreground border-gray-800">
           <div className="container mx-auto px-4 text-center text-gray-300">
-            <p>Spooky AI Hackathon. Powered By Cloudinary X Midudev.</p>
+            <p>Spooky AI Hackathon.</p>
+            <div className="flex items-center justify-center gap-4">
+              <span>Hackathon patrocinada por</span>
+              <div className="flex items-center gap-2">
+                <Cloudinary width={36} height={36} />
+                <span className="font-bold">Cloudinary</span>
+              </div>
+              <span>X</span>
+              <div className="flex items-center gap-2">
+                <Midudev width={36} height={36} />
+                <span className="font-bold">Midudev</span>
+              </div>
+            </div>
+
+
             <p className="mt-2">¡Usa el poder de la IA para crear las imágenes más espeluznantes!</p>
           </div>
         </footer>
