@@ -15,6 +15,7 @@ import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 import { CldImage } from "next-cloudinary";
+import { LinkPreview } from "@/components/ui/link-preview";
 
 interface CarouselProps {
   items: JSX.Element[];
@@ -232,6 +233,14 @@ export const Card = ({
               >
                 {card.title}
               </motion.p>
+              <motion.div
+                layoutId={layout ? `urlImagenOriginal-${card.urlImagenOriginal}` : undefined}
+                className="text-xl md:text-2xl font-semibold dark:text-neutral-700 mt-4 text-orange-300"
+              >
+                <LinkPreview url={card.urlImagenOriginal} className="font-bold text-orange-300">
+                  Imagen Original
+                </LinkPreview>
+              </motion.div>
             </motion.div>
           </div>
         )}
