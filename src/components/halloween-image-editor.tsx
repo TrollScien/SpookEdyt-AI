@@ -155,31 +155,12 @@ export function HalloweenImageEditor() {
                       </Button>
                     ))}
                   </div>
-                  {/* <Label htmlFor="prompt" className="block mb-2 text-gray-200">Describe tu transformación</Label>
-                <Textarea
-                  id="prompt"
-                  placeholder="Ej: Añade una niebla espeluznante y convierte los árboles en siluetas de monstruos"
-                  value={prompt}
-                  onChange={(e) => setPrompt(e.target.value)}
-                  className="mb-4 bg-gray-800 border-gray-600 text-gray-100 placeholder-gray-400"
-                />
-                <Button onClick={handleTransform} className="w-full bg-orange-500 hover:bg-orange-600 text-gray-100 font-semibold">
-                  <Wand2 className="w-4 h-4 mr-2" />
-                  Transformar con IA
-                </Button> */}
                 </div>
               </CardContent>
             </Card>
             <Card className="bg-gray-900 border-gray-700">
               <CardContent className="p-6">
-                <Label htmlFor="prompt" className="block mb-2 text-lg font-semibold text-orange-300">Describe tu transformación</Label>
-                <Textarea
-                  id="prompt"
-                  placeholder="Ej: Añade una niebla espeluznante y convierte los árboles en siluetas de monstruos"
-                  value={prompt}
-                  onChange={(e) => setPrompt(e.target.value)}
-                  className="mb-4 bg-gray-800 border-gray-600 text-gray-100 placeholder-gray-400 min-h-[150px]"
-                />
+
                 <div className="mb-4">
                   <Label className="text-lg font-semibold text-orange-300 mb-2">¿Qué quieres transformar?</Label>
                   <Tabs defaultValue="object" className="w-full" onValueChange={setReplaceOption}>
@@ -216,6 +197,14 @@ export function HalloweenImageEditor() {
                       </div>
                     </TabsContent>
                     <TabsContent value="background" className="mt-4">
+                      <Label htmlFor="prompt" className="block mb-2 text-lg font-semibold text-orange-300">Describe tu transformación</Label>
+                      <Textarea
+                        id="prompt"
+                        placeholder="Ej: Añade una niebla espeluznante y convierte los árboles en siluetas de monstruos"
+                        value={prompt}
+                        onChange={(e) => setPrompt(e.target.value)}
+                        className="mb-4 bg-gray-800 border-gray-600 text-gray-100 placeholder-gray-400 min-h-[150px]"
+                      />
                       <p className="text-sm text-gray-300">Se reemplazará el fondo de la imagen con tu descripción de transformación.</p>
                     </TabsContent>
                   </Tabs>
