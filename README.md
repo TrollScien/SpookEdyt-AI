@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎃 SpookEdit AI: Halloween Image Editor
 
-## Getting Started
+**SpookEdit AI** es una herramienta de edición de imágenes impulsada por inteligencia artificial, diseñada para darle un toque espeluznante a tus fotos. Convierte imágenes ordinarias en obras de arte de Halloween, añadiendo fantasmas, nieblas misteriosas y mucho más. Perfecto para quienes buscan añadir un toque de magia de Halloween a sus recuerdos.
 
-First, run the development server:
+## ✨ Características
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Transformaciones de Halloween:** Añade efectos espeluznantes y transforma objetos con solo unos clics.
+- **Interfaz Intuitiva:** Fácil de usar para todos, desde principiantes hasta expertos en edición de imágenes.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Comenzando
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerrequisitos
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Node.js y pnpm instalados
+- Cuenta de Cloudinary para gestionar la subida y transformación de imágenes
 
-## Learn More
+### Instalación
 
-To learn more about Next.js, take a look at the following resources:
+1. Clona el repositorio:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    ```bash
+    git clone https://github.com/tu-usuario/spookedit-ai.git
+    cd spookedit-ai
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. Instala las dependencias:
 
-## Deploy on Vercel
+    ```bash
+    pnpm install
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. Crea un archivo `.env` en la raíz del proyecto con las siguientes variables de entorno:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    ```env
+    CLOUDINARY_CLOUD_NAME=your_cloud_name
+    CLOUDINARY_API_KEY=your_api_key
+    CLOUDINARY_API_SECRET=your_api_secret
+    ```
+
+4. Inicia la aplicación:
+
+    ```bash
+    pnpm run dev
+    ```
+
+5. Abre tu navegador en `http://localhost:3000` para ver la aplicación en funcionamiento.
+
+## 📚 Uso
+
+### Subir y Transformar Imágenes
+
+1. **Sube una Imagen:**
+   - Haz clic en el botón "Subir Imagen".
+   - Selecciona la imagen desde tu dispositivo.
+
+2. **Aplica Sugerencias de Transformación:**
+   - Elige entre una variedad de sugerencias terroríficas para transformar tu imagen.
+
+3. **Descripción de Transformación:**
+   - Describe la transformación que deseas aplicar (por ejemplo, "Añade una niebla espeluznante y convierte los árboles en siluetas de monstruos").
+
+4. **Transformar con IA:**
+   - Haz clic en "Transformar con Magia de Halloween" y observa cómo tu imagen se transforma mágicamente.
+
+## 🛠️ Tecnologías Utilizadas
+
+- **Next.js:** Framework para aplicaciones React.
+- **Cloudinary:** Gestión y transformación de imágenes.
+- **Tailwind CSS:** Estilización de la interfaz de usuario.
+- **Framer Motion:** Animaciones fluidas e interactivas.
+
+## 🙌 Contribuir
+
+¡Las contribuciones son bienvenidas! Si deseas mejorar este proyecto, por favor sigue estos pasos:
+
+1. Haz un fork del proyecto.
+2. Crea una nueva rama (`git checkout -b feature/tu-nueva-funcionalidad`).
+3. Realiza tus cambios y haz commit (`git commit -m 'Añadir nueva funcionalidad'`).
+4. Sube la rama (`git push origin feature/tu-nueva-funcionalidad`).
+5. Abre un Pull Request.
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para obtener más detalles.
